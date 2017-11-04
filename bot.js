@@ -1,9 +1,14 @@
 const Discord = require('discord.js');
+const client = new Discord.Client();
 
-var bot = new Discord.Client();
-
-bot.on('ready', () => {
-    console.log("Bot Ready !");
+client.on('ready', () => {
+  console.log('I am ready!');
 });
 
-bot.login('Mzc2MzQzOTI1MTg4NzIyNjk5.DN9BNw.ri2eFbBEjUpxgTZzEzGtIw82Ty0');
+client.on('message', message => {
+  if (message.content === 'ping') {
+    message.reply('pong');
+  }
+});
+
+client.login('Mzc2MzQzOTI1MTg4NzIyNjk5.DN9JHg.Qg_pSoPB5Z9q8kv0W8V1goAv64g');
